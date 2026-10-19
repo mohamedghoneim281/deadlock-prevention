@@ -1,0 +1,55 @@
+Supervised cell (control place CTRL), batch 2A+2B
+
+Pre  (input arcs)
+            A_unload  B_unload    A_xfer    B_xfer    A_load    B_load A_done_M1 A_done_M2 B_done_M2 B_done_M1
+A_queue            0         0         0         0         1         0         0         0         0         0
+B_queue            0         0         0         0         0         1         0         0         0         0
+M1_free            0         0         0         1         1         0         0         0         0         0
+M2_free            0         0         1         0         0         1         0         0         0         0
+A_M1_proc          0         0         0         0         0         0         1         0         0         0
+A_M1_done          0         0         1         0         0         0         0         0         0         0
+A_M2_proc          0         0         0         0         0         0         0         1         0         0
+A_M2_done          1         0         0         0         0         0         0         0         0         0
+A_out              0         0         0         0         0         0         0         0         0         0
+B_M2_proc          0         0         0         0         0         0         0         0         1         0
+B_M2_done          0         0         0         1         0         0         0         0         0         0
+B_M1_proc          0         0         0         0         0         0         0         0         0         1
+B_M1_done          0         1         0         0         0         0         0         0         0         0
+B_out              0         0         0         0         0         0         0         0         0         0
+CTRL               0         0         0         0         1         1         0         0         0         0
+
+Post (output arcs)
+            A_unload  B_unload    A_xfer    B_xfer    A_load    B_load A_done_M1 A_done_M2 B_done_M2 B_done_M1
+A_queue            0         0         0         0         0         0         0         0         0         0
+B_queue            0         0         0         0         0         0         0         0         0         0
+M1_free            0         1         1         0         0         0         0         0         0         0
+M2_free            1         0         0         1         0         0         0         0         0         0
+A_M1_proc          0         0         0         0         1         0         0         0         0         0
+A_M1_done          0         0         0         0         0         0         1         0         0         0
+A_M2_proc          0         0         1         0         0         0         0         0         0         0
+A_M2_done          0         0         0         0         0         0         0         1         0         0
+A_out              1         0         0         0         0         0         0         0         0         0
+B_M2_proc          0         0         0         0         0         1         0         0         0         0
+B_M2_done          0         0         0         0         0         0         0         0         1         0
+B_M1_proc          0         0         0         1         0         0         0         0         0         0
+B_M1_done          0         0         0         0         0         0         0         0         0         1
+B_out              0         1         0         0         0         0         0         0         0         0
+CTRL               0         0         1         1         0         0         0         0         0         0
+
+C = Post - Pre (incidence)
+            A_unload  B_unload    A_xfer    B_xfer    A_load    B_load A_done_M1 A_done_M2 B_done_M2 B_done_M1
+A_queue            0         0         0         0        -1         0         0         0         0         0
+B_queue            0         0         0         0         0        -1         0         0         0         0
+M1_free            0         1         1        -1        -1         0         0         0         0         0
+M2_free            1         0        -1         1         0        -1         0         0         0         0
+A_M1_proc          0         0         0         0         1         0        -1         0         0         0
+A_M1_done          0         0        -1         0         0         0         1         0         0         0
+A_M2_proc          0         0         1         0         0         0         0        -1         0         0
+A_M2_done         -1         0         0         0         0         0         0         1         0         0
+A_out              1         0         0         0         0         0         0         0         0         0
+B_M2_proc          0         0         0         0         0         1         0         0        -1         0
+B_M2_done          0         0         0        -1         0         0         0         0         1         0
+B_M1_proc          0         0         0         1         0         0         0         0         0        -1
+B_M1_done          0        -1         0         0         0         0         0         0         0         1
+B_out              0         1         0         0         0         0         0         0         0         0
+CTRL               0         0         1         1        -1        -1         0         0         0         0

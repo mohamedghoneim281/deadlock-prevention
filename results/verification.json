@@ -1,0 +1,182 @@
+{
+  "policies": {
+    "unrestricted": {
+      "policy": "unrestricted",
+      "batch": [
+        2,
+        2
+      ],
+      "places": 14,
+      "transitions": 10,
+      "reachable_markings": 97,
+      "edges": 140,
+      "deadlocks_with_unfinished_jobs": 4,
+      "markings_that_cannot_complete": 16,
+      "completion_marking_reachable": true,
+      "every_marking_can_complete": false,
+      "p_invariants": [
+        "M1_free + A_M1_proc + A_M1_done + B_M1_proc + B_M1_done = 1",
+        "M2_free + A_M2_proc + A_M2_done + B_M2_proc + B_M2_done = 1",
+        "A_queue + A_M1_proc + A_M1_done + A_M2_proc + A_M2_done + A_out = 2",
+        "B_queue + B_M2_proc + B_M2_done + B_M1_proc + B_M1_done + B_out = 2"
+      ],
+      "invariants_hold_on_all_markings": true,
+      "max_tokens_per_place": {
+        "A_queue": 2,
+        "B_queue": 2,
+        "M1_free": 1,
+        "M2_free": 1,
+        "A_M1_proc": 1,
+        "A_M1_done": 1,
+        "A_M2_proc": 1,
+        "A_M2_done": 1,
+        "A_out": 2,
+        "B_M2_proc": 1,
+        "B_M2_done": 1,
+        "B_M1_proc": 1,
+        "B_M1_done": 1,
+        "B_out": 2
+      },
+      "one_bounded_machine_places": true,
+      "markings_with_both_machines_processing": 10,
+      "max_parts_in_cell": 2,
+      "shortest_deadlock_trace": [
+        "A_load",
+        "B_load",
+        "A_done_M1",
+        "B_done_M2"
+      ],
+      "deadlock_markings": [
+        {
+          "A_queue": 1,
+          "B_queue": 1,
+          "A_M1_done": 1,
+          "B_M2_done": 1
+        },
+        {
+          "B_queue": 1,
+          "A_M1_done": 1,
+          "A_out": 1,
+          "B_M2_done": 1
+        },
+        {
+          "A_queue": 1,
+          "A_M1_done": 1,
+          "B_M2_done": 1,
+          "B_out": 1
+        },
+        {
+          "A_M1_done": 1,
+          "A_out": 1,
+          "B_M2_done": 1,
+          "B_out": 1
+        }
+      ]
+    },
+    "one_active": {
+      "policy": "one_active",
+      "batch": [
+        2,
+        2
+      ],
+      "places": 15,
+      "transitions": 10,
+      "reachable_markings": 57,
+      "edges": 60,
+      "deadlocks_with_unfinished_jobs": 0,
+      "markings_that_cannot_complete": 0,
+      "completion_marking_reachable": true,
+      "every_marking_can_complete": true,
+      "p_invariants": [
+        "M1_free + A_M1_proc + A_M1_done + B_M1_proc + B_M1_done = 1",
+        "M2_free + A_M2_proc + A_M2_done + B_M2_proc + B_M2_done = 1",
+        "A_queue + A_M1_proc + A_M1_done + A_M2_proc + A_M2_done + A_out = 2",
+        "A_M1_proc + A_M1_done + A_M2_proc + A_M2_done + B_M2_proc + B_M2_done + B_M1_proc + B_M1_done + CTRL = 1",
+        "B_queue + B_M2_proc + B_M2_done + B_M1_proc + B_M1_done + B_out = 2"
+      ],
+      "invariants_hold_on_all_markings": true,
+      "max_tokens_per_place": {
+        "A_queue": 2,
+        "B_queue": 2,
+        "M1_free": 1,
+        "M2_free": 1,
+        "A_M1_proc": 1,
+        "A_M1_done": 1,
+        "A_M2_proc": 1,
+        "A_M2_done": 1,
+        "A_out": 2,
+        "B_M2_proc": 1,
+        "B_M2_done": 1,
+        "B_M1_proc": 1,
+        "B_M1_done": 1,
+        "B_out": 2,
+        "CTRL": 1
+      },
+      "one_bounded_machine_places": true,
+      "markings_with_both_machines_processing": 0,
+      "max_parts_in_cell": 1
+    },
+    "supervisor": {
+      "policy": "supervisor",
+      "batch": [
+        2,
+        2
+      ],
+      "places": 15,
+      "transitions": 10,
+      "reachable_markings": 81,
+      "edges": 108,
+      "deadlocks_with_unfinished_jobs": 0,
+      "markings_that_cannot_complete": 0,
+      "completion_marking_reachable": true,
+      "every_marking_can_complete": true,
+      "p_invariants": [
+        "M1_free + A_M1_proc + A_M1_done + B_M1_proc + B_M1_done = 1",
+        "M2_free + A_M2_proc + A_M2_done + B_M2_proc + B_M2_done = 1",
+        "A_M1_proc + A_M1_done + B_M2_proc + B_M2_done + CTRL = 1",
+        "A_queue + A_M1_proc + A_M1_done + A_M2_proc + A_M2_done + A_out = 2",
+        "B_queue + B_M2_proc + B_M2_done + B_M1_proc + B_M1_done + B_out = 2"
+      ],
+      "invariants_hold_on_all_markings": true,
+      "max_tokens_per_place": {
+        "A_queue": 2,
+        "B_queue": 2,
+        "M1_free": 1,
+        "M2_free": 1,
+        "A_M1_proc": 1,
+        "A_M1_done": 1,
+        "A_M2_proc": 1,
+        "A_M2_done": 1,
+        "A_out": 2,
+        "B_M2_proc": 1,
+        "B_M2_done": 1,
+        "B_M1_proc": 1,
+        "B_M1_done": 1,
+        "B_out": 2,
+        "CTRL": 1
+      },
+      "one_bounded_machine_places": true,
+      "markings_with_both_machines_processing": 6,
+      "max_parts_in_cell": 2
+    }
+  },
+  "maximally_permissive_reference": {
+    "reachable_markings": 81,
+    "edges": 108,
+    "one_active": {
+      "states_subset_of_maximal": true,
+      "safe_states_given_up": 24,
+      "edges_subset_of_maximal": true,
+      "safe_edges_given_up": 48,
+      "equals_maximally_permissive": false
+    },
+    "supervisor": {
+      "states_subset_of_maximal": true,
+      "safe_states_given_up": 0,
+      "edges_subset_of_maximal": true,
+      "safe_edges_given_up": 0,
+      "equals_maximally_permissive": true
+    }
+  },
+  "unrestricted_doomed_but_not_yet_deadlocked": 12
+}

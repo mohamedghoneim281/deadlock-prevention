@@ -1,0 +1,50 @@
+[
+  {
+    "batch": "1A+1B",
+    "unrestricted_markings": 24,
+    "unrestricted_deadlocks": 1,
+    "one_active_markings": 20,
+    "one_active_deadlocks": 0,
+    "supervisor_markings": 20,
+    "supervisor_deadlocks": 0,
+    "maximal_markings": 20,
+    "supervisor_is_maximal": true,
+    "one_active_gives_up": 0
+  },
+  {
+    "batch": "2A+2B",
+    "unrestricted_markings": 97,
+    "unrestricted_deadlocks": 4,
+    "one_active_markings": 57,
+    "one_active_deadlocks": 0,
+    "supervisor_markings": 81,
+    "supervisor_deadlocks": 0,
+    "maximal_markings": 81,
+    "supervisor_is_maximal": true,
+    "one_active_gives_up": 24
+  },
+  {
+    "batch": "3A+3B",
+    "unrestricted_markings": 212,
+    "unrestricted_deadlocks": 9,
+    "one_active_markings": 112,
+    "one_active_deadlocks": 0,
+    "supervisor_markings": 176,
+    "supervisor_deadlocks": 0,
+    "maximal_markings": 176,
+    "supervisor_is_maximal": true,
+    "one_active_gives_up": 64
+  },
+  {
+    "batch": "4A+4B",
+    "unrestricted_markings": 369,
+    "unrestricted_deadlocks": 16,
+    "one_active_markings": 185,
+    "one_active_deadlocks": 0,
+    "supervisor_markings": 305,
+    "supervisor_deadlocks": 0,
+    "maximal_markings": 305,
+    "supervisor_is_maximal": true,
+    "one_active_gives_up": 120
+  }
+]

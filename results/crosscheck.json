@@ -1,0 +1,12 @@
+{
+  "simulate_runs": 900,
+  "simulate_mismatches": 0,
+  "replay_traces": 1201,
+  "replay_steps": 23465,
+  "replay_mismatches": 0,
+  "deadlock_traces": 1,
+  "negative_tests": 14,
+  "negative_failures": 0,
+  "details": [],
+  "ok": true
+}

@@ -1,0 +1,5 @@
+batch,unrestricted_markings,unrestricted_deadlocks,one_active_markings,one_active_deadlocks,supervisor_markings,supervisor_deadlocks,maximal_markings,supervisor_is_maximal,one_active_gives_up
+1A+1B,24,1,20,0,20,0,20,True,0
+2A+2B,97,4,57,0,81,0,81,True,24
+3A+3B,212,9,112,0,176,0,176,True,64
+4A+4B,369,16,185,0,305,0,305,True,120

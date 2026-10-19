@@ -1,0 +1,60 @@
+# place <name> <initial tokens>
+place A_queue 2
+place B_queue 2
+place M1_free 1
+place M2_free 1
+place A_M1_proc 0
+place A_M1_done 0
+place A_M2_proc 0
+place A_M2_done 0
+place A_out 0
+place B_M2_proc 0
+place B_M2_done 0
+place B_M1_proc 0
+place B_M1_done 0
+place B_out 0
+place CTRL 1
+# transition <name> <controllable 0|1> <delay ticks>; file order = dispatch priority
+transition A_unload 1 0
+transition B_unload 1 0
+transition A_xfer 1 0
+transition B_xfer 1 0
+transition A_load 1 0
+transition B_load 1 0
+transition A_done_M1 0 4
+transition A_done_M2 0 4
+transition B_done_M2 0 4
+transition B_done_M1 0 4
+# pre|post <transition> <place> <weight>
+pre A_unload A_M2_done 1
+post A_unload M2_free 1
+post A_unload A_out 1
+pre B_unload B_M1_done 1
+post B_unload M1_free 1
+post B_unload B_out 1
+pre A_xfer A_M1_done 1
+pre A_xfer M2_free 1
+post A_xfer A_M2_proc 1
+post A_xfer M1_free 1
+post A_xfer CTRL 1
+pre B_xfer B_M2_done 1
+pre B_xfer M1_free 1
+post B_xfer B_M1_proc 1
+post B_xfer M2_free 1
+post B_xfer CTRL 1
+pre A_load A_queue 1
+pre A_load M1_free 1
+pre A_load CTRL 1
+post A_load A_M1_proc 1
+pre B_load B_queue 1
+pre B_load M2_free 1
+pre B_load CTRL 1
+post B_load B_M2_proc 1
+pre A_done_M1 A_M1_proc 1
+post A_done_M1 A_M1_done 1
+pre A_done_M2 A_M2_proc 1
+post A_done_M2 A_M2_done 1
+pre B_done_M2 B_M2_proc 1
+post B_done_M2 B_M2_done 1
+pre B_done_M1 B_M1_proc 1
+post B_done_M1 B_M1_done 1

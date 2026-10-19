@@ -1,0 +1,73 @@
+{
+  "environment": {
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "machine": "x86_64",
+    "cpu": "AMD Ryzen 7 6800H with Radeon Graphics",
+    "python": "3.10.12",
+    "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+    "build_flags": "-O2 -std=c++17",
+    "engine": "build/petri_engine"
+  },
+  "cases": [
+    {
+      "label": "demo batch 2A+2B",
+      "batch": [
+        2,
+        2
+      ],
+      "makespan_ticks": 24,
+      "firings_per_run": 20,
+      "cpp": {
+        "reps": 100000,
+        "transition_firings_per_run": 20,
+        "mean_run_ns": 488.0,
+        "mean_ns_per_firing": 24.4,
+        "steps_per_run": 7,
+        "step_ns_mean": 50.9,
+        "step_ns_p50": 50,
+        "step_ns_p99": 61,
+        "step_ns_max": 5260,
+        "model_bytes": 2527,
+        "peak_rss_kb": 3476,
+        "peak_rss_with_latency_buffer_kb": 4572
+      },
+      "python": {
+        "reps": 2000,
+        "mean_run_ns": 38491.46900006417,
+        "mean_ns_per_firing": 1924.5734500032086,
+        "tracemalloc_peak_kb": 1.0234375
+      },
+      "speedup": 78.87596106570527
+    },
+    {
+      "label": "long run 100A+100B",
+      "batch": [
+        100,
+        100
+      ],
+      "makespan_ticks": 808,
+      "firings_per_run": 1000,
+      "cpp": {
+        "reps": 2000,
+        "transition_firings_per_run": 1000,
+        "mean_run_ns": 9337.3,
+        "mean_ns_per_firing": 9.34,
+        "steps_per_run": 203,
+        "step_ns_mean": 60.0,
+        "step_ns_p50": 60,
+        "step_ns_p99": 71,
+        "step_ns_max": 5581,
+        "model_bytes": 2527,
+        "peak_rss_kb": 3480,
+        "peak_rss_with_latency_buffer_kb": 7260
+      },
+      "python": {
+        "reps": 20,
+        "mean_run_ns": 1388510.1999903782,
+        "mean_ns_per_firing": 1388.5101999903782,
+        "tracemalloc_peak_kb": 1.39453125
+      },
+      "speedup": 148.70575005519564
+    }
+  ]
+}
