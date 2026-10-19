@@ -2,7 +2,7 @@
 
 **A Petri-net model, proofs, closed-form results, and a cross-validated C++ execution engine — reproducible with one command.**
 
-[![ci](https://github.com/mohamedghoneim281/petri-cell/actions/workflows/ci.yml/badge.svg)](https://github.com/mohamedghoneim281/petri-cell/actions/workflows/ci.yml)
+[![ci](https://github.com/mohamedghoneim281/deadlock-prevention/actions/workflows/ci.yml/badge.svg)](https://github.com/mohamedghoneim281/deadlock-prevention/actions/workflows/ci.yml)
 ![python](https://img.shields.io/badge/python-3.10%20%7C%203.12-blue)
 ![c++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
@@ -29,8 +29,8 @@ The monitor-place technique itself is established (Giua, DiCesare & Silva 1992; 
 **Ubuntu / Debian / Raspberry Pi OS — one command** (installs missing build tools, creates a private `.venv`, then builds, tests, verifies, experiments, benchmarks, plots, and prints a PASS/FAIL summary; about 20 s plus package installation):
 
 ```bash
-git clone https://github.com/mohamedghoneim281/petri-cell.git
-cd petri-cell
+git clone https://github.com/mohamedghoneim281/deadlock-prevention.git
+cd deadlock-prevention
 bash scripts/setup_ubuntu.sh
 ```
 
@@ -232,8 +232,8 @@ CI re-runs the full pipeline on every push.
   author = {Mohamed Ghoneim},
   title  = {Deadlock Prevention in a Blocking Two-Machine Manufacturing Cell with a Single Petri-Net Control Place: Proofs, Closed-Form Results, and a Cross-Validated C++ Execution Engine},
   year   = {2026},
-  note   = {arXiv:XXXX.XXXXX},
-  url    = {https://github.com/mohamedghoneim281/petri-cell}
+  note   = {DOI: 10.5281/zenodo.23485309},
+  url    = {https://github.com/mohamedghoneim281/deadlock-prevention}
 }
 ```
 
