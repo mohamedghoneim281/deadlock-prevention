@@ -7,7 +7,7 @@
 ![c++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
-> **Technical report:** *Deadlock Prevention in a Blocking Two-Machine Manufacturing Cell with a Single Petri-Net Control Place: Proofs, Closed-Form Results, and a Cross-Validated C++ Execution Engine* — arXiv:[XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX) *(link to be added)*
+> **Technical report:** *Deadlock Prevention in a Blocking Two-Machine Manufacturing Cell with a Single Petri-Net Control Place: Proofs, Closed-Form Results, and a Cross-Validated C++ Execution Engine* 
 
 ## What this is
 
